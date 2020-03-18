@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>响应式移动端页面</title>
+    <style>
+    *{margin:0;padding:0;}
+    *{box-sizing:border-box;}
+    ul,ol{list-style:none;}
+    a{color:inherit;text-decoration: none;}
+    body{
+        background:#BC3428;
+    }
+    header{
+        width:100%;
+        height:100px;
+        background:#D33A2C;
+        position:relative;
+        padding:18px 9px 0px 9px;
+    }
+    .logo{
+        width:35px;
+        height:35px;
+        margin-top:2px;
+        border-radius:5px;
+        background:white;
+        color:#D33A2C;
+        transform:rotate(-10deg); 
+        text-align: center;
+        line-height:23px;
+        font-size:61px;
+        margin-left:28px;
+        font-weight: 1000;
+        
+    }
+    .menu{color:white;
+        width:90px;
+        height:40px;  
+        top:23px;
+        right:17px;
+        position:absolute;
+        background:#D33A2C;
+        border-radius:8px;
+        border:3px solid white;
+        font-weight:700;
+        font-size:16px;
+        }
+    .menu.active{background:#811D15;border:3px solid #811D15;}
+    .nav_cell{
+        display:none;
+    }
+    .nav_cell.active{
+        display:block;
+        display:flex;
+        justify-content: space-between;
+        background:#BC3428;
+        color:white;
+        margin-top:23px;
+        width:100%;
+
+    }
+    .nav_pc{
+        display:none;
+    }
+    
+    @media(min-width:902px){
+        header{
+        height:177px;
+    }
+        header>button{
+            display:none;
+        }
+        .nav_pc{
+            display:block;
+        display:flex;
+        justify-content: space-between;
+        background:#BC3428;
+        color:white;
+        margin-top:94px;
+        width:100%;
+     }
+    }
+    </style>
+</head>
+<body>
+    <header>
+       
+                <div class="logo">s</div>  
+                <button id=menu class="menu">Menu</button>
+                <ul id=nav_cell class="nav_cell">
+                    <li><a href="#">导航1</a></li>
+                    <li><a href="#">导航2</a></li>
+                    <li><a href="#">导航3</a></li>
+                    <li><a href="#">导航4</a></li>
+                    <li><a href="#">导航5</a></li>
+                </ul>
+                <ul id=nav_pc class="nav_pc">
+                    <li><a href="#">导航1</a></li>
+                    <li><a href="#">导航2</a></li>
+                    <li><a href="#">导航3</a></li>
+                    <li><a href="#">导航4</a></li>
+                    <li><a href="#">导航5</a></li>
+                </ul>
+              
+    </header>
+    <script>
+    menu.onclick=function(){
+        nav_cell.classList.toggle('active')
+        menu.classList.toggle('active')
+    }
+    </script>
+</body>
+</html>
